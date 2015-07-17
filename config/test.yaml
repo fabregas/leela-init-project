@@ -1,0 +1,12 @@
+leela:
+    bind_address: 127.0.0.1
+    bind_port: 8080
+    monitor_changes: yes
+    nginx_proxy: false
+    leela_proc_count: 1
+    logger_config: logger-test.yaml
+    daemonize: false
+    services:
+        - endpoint: service.py
+    sessions_manager:
+        endpoint: leela.core.sessions.InMemorySessionsManager

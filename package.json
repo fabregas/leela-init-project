@@ -1,0 +1,26 @@
+{
+  "name": "leela-project",
+  "version": "0.0",
+  "devDependencies": {
+    "gulp": "",
+    "gulp-filter": "",
+    "gulp-ignore": "",
+    "gulp-rimraf": "",
+    "gulp-less": "",
+    "gulp-concat": "",
+    "gulp-order": "",
+    "gulp-uglify": "",
+    "gulp-sourcemaps": "",
+    "gulp-cssmin": "",
+    "gulp-imagemin": "",
+    "imagemin-pngcrush": "",
+    "gulp-angular-templatecache": "",
+    "gulp-ng-annotate": "",
+    "gulp-replace": "",
+    "gulp-angular-filesort": "",
+    "streamqueue": "",
+    "main-bower-files": "",
+    "gulp-load-plugins": "",
+    "gulp-rename": ""
+  }
+}

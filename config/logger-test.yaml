@@ -1,0 +1,30 @@
+
+version: 1
+formatters:
+    verbose:
+        format: '%(levelname)s %(module)s %(process)d %(message)s'
+    simple:
+        format: '%(levelname)s %(message)s'
+handlers:
+    console:
+        level: INFO
+        class: logging.StreamHandler
+        formatter: simple
+    syslog:
+        level: INFO
+        class: logging.handlers.SysLogHandler
+        address: '/dev/log'
+        formatter: verbose
+loggers:
+    leela:
+        handlers: [console, syslog]
+        level: INFO
+    asyncio_mongo:
+        handlers: [console]
+        level: INFO
+    aiohttp.access:
+        handlers: [console]
+        level: INFO
+    aiohttp.server:
+        handlers: [console]
+        level: INFO
