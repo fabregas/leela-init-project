@@ -1,0 +1,14 @@
+
+Install project devel dependencies:
+    
+    # npm install
+
+
+Install project dependencies (front-end):
+
+    # bower install
+
+
+Rebuild project modules (front-end):
+
+    # gulp
