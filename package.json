@@ -20,7 +20,8 @@
     "gulp-angular-filesort": "",
     "streamqueue": "",
     "main-bower-files": "",
-    "gulp-load-plugins": "",
+    "gulp-load-plugins": "", 
+    "run-sequence": "",
     "gulp-rename": ""
   }
 }
