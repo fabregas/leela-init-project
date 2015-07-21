@@ -1,6 +1,6 @@
 {
   "name": "leela-project",
-  "version": "0.0",
+  "version": "0.0.0",
   "devDependencies": {
     "gulp": "",
     "gulp-filter": "",
