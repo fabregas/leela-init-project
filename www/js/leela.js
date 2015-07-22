@@ -8,6 +8,12 @@ factory('leela', function($http) {
         post: function(resource, data) {
             return $http.post('/api/'+resource, data);
         },
+        put: function(resource, data) {
+            return $http.put('/api/'+resource, data);
+        },
+        delete: function(resource, data) {
+            return $http.delete('/api/'+resource, data);
+        },
         auth: function(login, password) {
             return $http.post('/api/__auth__', {username: login, password: password});
         },
