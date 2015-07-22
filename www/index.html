@@ -1,15 +1,16 @@
 <html ng-app="LeelaApp">
     <head>
-        <script src="/static/js/modules.min.js"></script>
-        <script src="/static/js/leela.js"></script>
-        <script src="/static/js/main.js"></script>
-
         <link rel="stylesheet" type="text/css" href="/static/css/modules.less.css">
         <link rel="stylesheet" type="text/css" href="/static/css/modules.css">
         <link rel="stylesheet" type="text/css" href="/static/css/main.css">
     </head>
 
-    <body ng-controller="LeelaCtrl" >
-        <h1>Hello, Leela</h1>
+    <body>
+        <div ng-view></div>
+
+        <script src="/static/js/modules.min.js"></script>
+        <script src="/static/js/leela.js"></script>
+        <script src="/static/js/app.js"></script>
+        <script src="/static/js/views/main_view.js"></script>
     </body>
 </html>
