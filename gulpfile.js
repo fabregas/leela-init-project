@@ -5,6 +5,8 @@ var gulp = require('gulp');
 var seq = require('run-sequence');
 var path = require('path');
 var rimraf = require('gulp-rimraf');
+var sourcemaps = require('gulp-sourcemaps');
+var less = require('gulp-less');
 
 // Include plugins
 var plugins = require("gulp-load-plugins")({
@@ -39,7 +41,18 @@ gulp.task('css', function() {
                 .pipe(gulp.dest(dest + 'css'));
 });
 
+
+gulp.task("less", function(){
+    return gulp.src(plugins.mainBowerFiles())
+            .pipe(sourcemaps.init())
+            .pipe(plugins.filter('*.less'))
+            .pipe(less())
+            .pipe(plugins.concat("modules.less.css"))
+            .pipe(sourcemaps.write())
+            .pipe(gulp.dest(dest + 'css'));
+});
+
 gulp.task('default', function(done) {
-  var tasks = ['js', 'css'];
+  var tasks = ['js', 'less', 'css'];
   seq('clean', tasks, done);
 });
