@@ -7,11 +7,13 @@
     "gulp-ignore": "",
     "gulp-rimraf": "",
     "gulp-less": "",
+    "gulp-sass": "",
     "gulp-concat": "",
     "gulp-order": "",
     "gulp-uglify": "",
     "gulp-sourcemaps": "",
     "gulp-cssmin": "",
+    "gulp-flatten": "",
     "gulp-imagemin": "",
     "imagemin-pngcrush": "",
     "gulp-angular-templatecache": "",
@@ -22,6 +24,7 @@
     "main-bower-files": "",
     "gulp-load-plugins": "", 
     "run-sequence": "",
+    "merge-stream": "",
     "gulp-rename": ""
   }
 }
