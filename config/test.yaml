@@ -6,7 +6,9 @@ leela:
     leela_proc_count: 1
     logger_config: logger-test.yaml
     daemonize: false
-    services:
-        - endpoint: service.py
-    sessions_manager:
-        endpoint: leela.core.sessions.InMemorySessionsManager
+
+middlewares: []
+
+services:
+    - endpoint: service.MyService
+

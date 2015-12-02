@@ -1,27 +1,14 @@
 leela:
     bind_address: 0.0.0.0
-    bind_port: 8080
-    monitor_changes: true
+    bind_port: 80
     leela_proc_count: -1
     logger_config: logger-production.yaml
     nginx_proxy: true
     nginx_exec: /usr/sbin/nginx
-    services:
-        - endpoint: service.py
-          config:
-             db_name: test_leela_proj_db
-    sessions_manager:
-        endpoint: leela.db_support.mongo.MongoSessionsManager
 
-CORS:
-    - url_regex: '^.*$'
-      allow_origin: []
-      allow_credentials: false #true
-      allow_methods: [GET, POST, PUT, PATCH, DELETE, OPTIONS]
-      allow_headers: ['x-requested-with', 'content-type', 'accept',
-                      'origin', 'authorization', 'x-csrftoken']
- 
-    - url_regex: '^/api/.*$'
-      allow_origin: ['*']
-      allow_credentials: true
-      
+middlewares: []
+
+services:
+    - endpoint: service.py
+      config: {}
+      middlewares: []

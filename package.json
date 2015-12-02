@@ -15,6 +15,7 @@
     "gulp-cssmin": "",
     "gulp-flatten": "",
     "gulp-imagemin": "",
+    "gulp-notify": "",
     "imagemin-pngcrush": "",
     "gulp-angular-templatecache": "",
     "gulp-ng-annotate": "",

@@ -1,27 +1,40 @@
-#!/usr/bin/python
+import os
+import asyncio
+from leela.core.service import LeelaService
+from leela.core.decorators import leela_get
 
-from leela.core import *
-from leela.db_support.mongo import MongoDB
 
-class MyService(AService):
-    @classmethod
+class MyService(LeelaService):
+    def __init__(self):
+        # TODO: impement constructor if you need some config parameters
+        # for you service
+        # Don't forget change your configuration yaml file in this case
+        pass
+
     @asyncio.coroutine
-    def initialize(cls, config):
-        #mongodb backend initialization example
-        #
-        #if 'db_name' not in config:
-        #    raise RuntimeError('db_name does not found in YAML config')
-        #db = MongoDB(config.get('db_name', None))
-        #yield from db.connect(config.get('db_hostname', '127.0.0.1'),
-        #                      config.get('db_port', 27017))
-        #Model.init(db)
+    def start(self):
+        # TODO: implement this coroutine if need some async initialization
+        # or just remove this method
+        pass
 
-        db = None
-        return cls(db)
+    @asyncio.coroutine
+    def stop(self):
+        # TODO: implement this coroutine if need some async destructor
+        # or just remove this method
+        pass
+
+
+    @leela_get('uname')
+    def get_uname(self, data):
+        """This method is example, you can remove it ;)"""
+
+        uname = os.uname()
+
+        return {'sysname': uname.sysname,
+                'nodename': uname.nodename,
+                'release': uname.release,
+                'version': uname.version,
+                'machine': uname.machine}
 
     # TODO: implement your API here...
     #
-    #@reg_get('echo')
-    #def echo_method(self, data, http_req):
-    #    return data
-

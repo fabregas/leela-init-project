@@ -19,9 +19,6 @@ loggers:
     leela:
         handlers: [console, syslog]
         level: INFO
-    asyncio_mongo:
-        handlers: [console]
-        level: INFO
     aiohttp.access:
         handlers: [console]
         level: INFO

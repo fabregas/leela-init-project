@@ -13,9 +13,6 @@ loggers:
     leela:
         handlers: [syslog]
         level: INFO
-    asyncio_mongo:
-        handlers: [syslog]
-        level: INFO
     aiohttp.access:
         handlers: [syslog]
         level: INFO
