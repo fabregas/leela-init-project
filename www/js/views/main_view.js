@@ -6,21 +6,19 @@ angular.module('LeelaApp.MainView', ['ngRoute', 'leela'])
 .config(['$routeProvider', function($routeProvider) {
       $routeProvider.when('/', {
             templateUrl: 'static/templates/main_view.html',
-            controller: 'MainCtrl',
-	    controllerAs: 'main'
+            controller: 'MainCtrl'
       });
 }])
 
-.controller('MainCtrl', ['leela', function(leela) {
+.controller('MainCtrl', ['$scope', 'leela', function($scope,leela) {
     // this is example code block... feel free for remove it
     //
-    var scope = this;
-    scope.uname = {}
+    $scope.uname = {}
 
     leela.get('uname')
      .success(function(data) {
-	scope.uname = data;
-	console.log(scope);
+	$scope.uname = data;
+	console.log(data);
      })
      .error(function(data) {
 	alert('Get uname failed: ' + data);

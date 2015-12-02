@@ -9,6 +9,6 @@ leela:
 middlewares: []
 
 services:
-    - endpoint: service.py
+    - endpoint: service.MyService
       config: {}
       middlewares: []
